@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scipl"
+dynamic = ["version"]
+description = "Scientific plotting script."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    {name = "Tomáš Jíra", email = "tom.jira@gmail.com"},
+]
+dependencies = [
+    "numpy",
+    "matplotlib",
+]
+
+[project.urls]
+Homepage = "https://github.com/tjira/scipl"
+
+[project.scripts]
+scipl = "scipl.__main__:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "scipl.__version__"}
